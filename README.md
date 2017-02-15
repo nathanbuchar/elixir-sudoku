@@ -1,6 +1,6 @@
 # Elixir Sudoku
 
-An exploration into complex logic and recursion using Elixir.
+An exploration into complex logic, backtracing, and recursion using Elixir.
 
 
 ***
@@ -30,7 +30,7 @@ iex> Sudoku.solve("0,0,0,0,9,7,0,0,6,...,9,0,0,6,4,0,0,0,0")
    - **Yes** Continue to next step
    - **No** Go to step 6
 
-5. Get the next legal value for this cell. Does one exist?
+5. Get the next legal value for the current cell. Does one exist?
    - **Yes** Set the value of the cell to this value and go to step 1
    - **No** Go to step 3
 
