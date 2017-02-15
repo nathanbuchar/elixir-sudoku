@@ -22,7 +22,7 @@ iex> Sudoku.solve("0,0,0,0,9,7,0,0,6,...,9,0,0,6,4,0,0,0,0")
       - **Yes** The board is invalid
       - **No** Go to step 6
 
-3. Get coordinates of the next empty cell on the board. Does on exist?
+3. Get coordinates of the next empty cell on the board. Does one exist?
    - **Yes** Continue to next step
    - **No** Congratulations! You have solved the puzzle! :tada:
 
@@ -31,10 +31,10 @@ iex> Sudoku.solve("0,0,0,0,9,7,0,0,6,...,9,0,0,6,4,0,0,0,0")
    - **No** Go to step 6
 
 5. Get the next legal value for this cell. Does one exist?
-   - **Yes** Set the value of the cell to this value and go to step 1.
-   - **No** Go to step 2
+   - **Yes** Set the value of the cell to this value and go to step 1
+   - **No** Go to step 3
 
-6. Clear the value of this cell and remove it from the history. Go to step 4.
+6. Clear the value of this cell and remove it from the history. Go to step 5.
 
 
 ## TODO
