@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.14.5">
+    <title>Elixir Sudoku – Elixir Sudoku v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-a07cea761b.css" />
+    
+    <script src="dist/sidebar_items-bd2847216b.js"></script>
+  </head>
+  <body data-type="extras">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+
+<div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="Sudoku.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Elixir Sudoku
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+<h1>Elixir Sudoku</h1>
+<p>An exploration into complex logic, backtracing, and recursion using Elixir.</p>
+<hr class="thick"/>
+<h2 id="usage" class="section-heading">
+  <a href="#usage" class="hover-link"><i class="icon-link"></i></a>
+  Usage
+</h2>
+
+<pre><code class="elixir">iex&gt; Sudoku.solve(&quot;0,0,0,0,9,7,0,0,6,...,9,0,0,6,4,0,0,0,0&quot;)
+&quot;1,8,4,3,9,7,2,5,6,...,9,3,1,6,4,2,7,8,5&quot;</code></pre>
+<h2 id="solving-methodology" class="section-heading">
+  <a href="#solving-methodology" class="hover-link"><i class="icon-link"></i></a>
+  Solving Methodology
+</h2>
+
+<ol>
+<li><p>Start</p>
+</li>
+<li><p>Is board valid?</p>
+</li>
+</ol>
+<ul>
+<li><strong>Yes</strong> Continue to next step
+</li>
+<li><p><strong>No</strong> Is the solving history empty?</p>
+<ul>
+<li><strong>Yes</strong> The board is invalid
+</li>
+<li><strong>No</strong> Go to step 6
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>Get coordinates of the next empty cell on the board. Does one exist?
+</li>
+</ol>
+<ul>
+<li><strong>Yes</strong> Continue to next step
+</li>
+<li><strong>No</strong> Congratulations! You have solved the puzzle! :tada:
+</li>
+</ul>
+<ol start="4">
+<li>Get all legal values for this cell. Do any exist?
+</li>
+</ol>
+<ul>
+<li><strong>Yes</strong> Continue to next step
+</li>
+<li><strong>No</strong> Go to step 6
+</li>
+</ul>
+<ol start="5">
+<li>Get the next legal value for the current cell. Does one exist?
+</li>
+</ol>
+<ul>
+<li><strong>Yes</strong> Set the value of the cell to this value and go to step 1
+</li>
+<li><strong>No</strong> Go to step 3
+</li>
+</ul>
+<ol start="6">
+<li>Clear the value of this cell and remove it from the history. Go to step 5.
+</li>
+</ol>
+<h2 id="todo" class="section-heading">
+  <a href="#todo" class="hover-link"><i class="icon-link"></i></a>
+  TODO
+</h2>
+
+<ul>
+<li>Make concurrent
+</li>
+</ul>
+<hr class="thick"/>
+<p><small>Copyright (c) 2017 <a href="mailto:hello@nathanbuchar.com">Nathan Buchar</a>. All Rights Reserved.</small></p>
+
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.5),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-4aef34ad5f.js"></script>
+  </body>
+</html>
+
