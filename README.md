@@ -1,6 +1,6 @@
 # Elixir Sudoku
 
-An exploration into complex logic, backtracing, and recursion using Elixir.
+An exploration into complex logic, backtracing, and recursion using Elixir. Check out the [Documentation](http://nathanbuchar.github.io/elixir-sudoku).
 
 
 ***
