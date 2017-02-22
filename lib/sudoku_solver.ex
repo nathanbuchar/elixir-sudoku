@@ -47,12 +47,11 @@ defmodule Sudoku.Solver do
   """
   def do_solve(board, history \\ []) do
     unless Board.valid?(board) do
-      cond do
-        Enum.empty?(history) ->
-          {:err, :invalid_board}
-        true ->
-          board
-          |> backtrace(history)
+      if Enum.empty?(history) do
+        {:err, :invalid_board}
+      else
+        board
+        |> backtrace(history)
       end
     else
       board
